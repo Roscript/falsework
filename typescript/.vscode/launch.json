@@ -1,0 +1,30 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "tsc build & debug",
+            "program": "${file}",
+            "preLaunchTask": "tsc build",
+            // "preLaunchTask": "tsc: 构建 - tsconfig.json",
+            "sourceMaps": true,
+            "outFiles": ["${workspaceFolder}/**/*.js"]
+          },
+          {
+            "name": "ts-node dubug (ts-node locally installed)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/ts-node/dist/bin.js",
+            "args": [
+                "${relativeFile}"
+            ],
+            "cwd": "${workspaceRoot}",
+            "protocol": "inspector"
+        },
+          
+    ]
+}
