@@ -10,9 +10,10 @@
             "name": "tsc build & debug",
             "program": "${file}",
             "preLaunchTask": "tsc build",
-            // "preLaunchTask": "tsc: 构建 - tsconfig.json",
             "sourceMaps": true,
+            // "outputCapture": "std",
             "outFiles": ["${workspaceFolder}/**/*.js"]
+
           },
           {
             "name": "ts-node dubug (ts-node locally installed)",
@@ -24,7 +25,7 @@
             ],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector"
-        },
+        }
           
     ]
 }
